@@ -8,7 +8,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/user-microservice
+    url: jdbc:mysql://localhost:3306/session-microservice
     username: diego
     password: diego18
 
@@ -20,3 +20,9 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: none
+configuration:
+  flyway:
+    options: ?createDatabaseIfNotExist=true
+rest:
+  client:
+    user-url: localhost:8090/user-microservice
